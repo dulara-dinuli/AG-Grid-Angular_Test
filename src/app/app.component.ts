@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AgGridAngular } from 'ag-grid-angular';
+import { GridApi, GridReadyEvent, PaginationNumberFormatterParams } from 'ag-grid-community';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,11 @@ export class AppComponent {
     {headerName: 'E-mail', field: 'email', flex: 3}
   ];
 
+  private gridApi!: GridApi;
+  onGridReady(params: GridReadyEvent) {
+    this.gridApi = params.api; //Getting parameters through Grid API
+  }
+
   rowData= [];
   rowHeight = 50;
   paginationPageSize = 5;
@@ -23,12 +29,12 @@ export class AppComponent {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void{
-    fetch('https://raw.githubusercontent.com/dulara-dinuli/AG-Grid-Angular_Test/main/employeeData.json')
+    fetch('https://raw.githubusercontent.com/dulara-dinuli/AG-Grid-Angular_Test/main/Dynamic%20Json%20Data/employeeData.json')
       .then(result => result.json())
       .then(rowData => this.rowData = rowData);
 
     // Fetch the JSON files data using Angular HttpClient module
-    // this.http.get<any>('https://raw.githubusercontent.com/dulara-dinuli/AG-Grid-Angular_Test/main/employeeData.json')
+    // this.http.get<any>('https://raw.githubusercontent.com/dulara-dinuli/AG-Grid-Angular_Test/main/Dynamic%20Json%20Data/employeeData.json')
     //   .subscribe(
     //     data => {
     //       // Handle the received data here
@@ -39,7 +45,26 @@ export class AppComponent {
   defaultColDef = {
     sortable: true,
     filter: true,
-    unSortIcon: true
+    unSortIcon: true,
+    suppressMovable:true,
+  };
+
+  public paginationNumberFormatter: (
+    params: PaginationNumberFormatterParams
+  ) => string = (params: PaginationNumberFormatterParams) => {
+    return '[' + params.value.toLocaleString() + ']';
   };
   
+  onPageSizeChanged() {
+    var value = (document.getElementById('pageSize') as HTMLInputElement).value;
+    this.gridApi.paginationSetPageSize(Number(value));
+  }
+
+  // Method to change the table data according to the search bar inputs
+  onFilterTextBoxChanged() {
+    this.gridApi.setQuickFilter(
+      (document.getElementById('searchFeature') as HTMLInputElement).value
+    );
+  }
+
 }

@@ -1,13 +1,34 @@
+<!-- Default Search bar -->
+<form role="search" >
+    <input class="form-control searchBar" type="search" id="searchFeature" placeholder="&#xf002;   Search" (input)="onFilterTextBoxChanged()">
+</form>
+
+<!-- Create AG Grid Table -->
 <ag-grid-angular
-style="width: 100%; height: fit-content"
-class="ag-theme-alpine"
-[rowData]="rowData"
-[rowHeight]="rowHeight"
-[columnDefs]="columnDefs"
-[defaultColDef]="defaultColDef"
-[pagination]="true"
-[paginationPageSize]="paginationPageSize"
-[suppressMenuHide]="true"
-domLayout='autoHeight'
->
+    style="width: 80%;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [rowHeight]="rowHeight"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    [paginationNumberFormatter]="paginationNumberFormatter"
+    [suppressMenuHide]="true"
+    domLayout='autoHeight'
+    (gridReady)="onGridReady($event)"
+    [cacheQuickFilter]="true"
+    [excludeHiddenColumnsFromQuickFilter] = "true"
+    >
 </ag-grid-angular>
+  
+<div class="pageCount">
+    Page Size:
+    <select (change)="onPageSizeChanged()" id="pageSize">
+        <option value="5" selected="true">Default</option>
+        <option value="2">2</option>
+        <option value="8">8</option>
+        <option value="15">15</option>
+    </select>
+</div>
+
