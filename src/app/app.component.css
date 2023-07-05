@@ -1,72 +1,91 @@
-.ag-theme-alpine {
-    /* position: relative; */
-    border: 1.5px solid  rgba(0, 0, 0, 0.521);
-    border-collapse: separate;
-    border-spacing: 0;
-    border-left: 0.5px solid  rgba(0, 0, 0, 0.13);
-    border-radius: 15px;
-    overflow: hidden; 
-    box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.521);
-    margin:0;
-    margin-top: 6rem;
-    margin-left: 9rem;
-    --ag-odd-row-background-color: #D9D9D9;
-    --ag-header-background-color: rgb(109, 188, 169);
-    --ag-row-hover-color: rgba(37, 73, 58, 0.349);
-    --ag-range-selection-border-color:transparent;
-    --ag-row-border:none;
-    --ag-header-column-separator-display:border;
-    --ag-header-column-separator-color: rgba(0, 0, 0, 0.521); 
-
+.footer{
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0%;
+    font-weight: 600;
+    width:100%;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    text-align:center;
+    padding: 5px;
+    padding-left: 80px;
+    color: rgb(62, 62, 62);
 }
 
-.ag-ltr .ag-cell{
-    border-right-width: 1px;
-    border-right-color:  rgba(0, 0, 0, 0.521);
+.intro{
+    width:70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 5px rgba(175, 171, 171, 0.553);
 }
 
-.ag-header-cell{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.521);
+h3{
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 3%;
 }
 
-.ag-theme-alpine .ag-icon-menu:hover{
-    color: rgb(0, 46, 37);
+h4{
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
-.ag-theme-alpine .ag-icon-none:hover{
-    color: rgb(5, 62, 49);
+.card{
+    border: none;
+    margin-right: 10px;
+    margin-top: 2rem;
 }
 
-.ag-header-cell-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
+.agGridLogo{
+    width: 3rem;
+    height: 3rem;
+    margin-left: 10px;
 }
 
-/* Default Search bar styles */
-.searchBar,.form-control{
-    position: absolute;
-    top: 5%;
-    right: 11%;
-    width: 20%;
-    background-color: rgb(224, 224, 224);
-    color: #202020;
-    font-family:Arial, FontAwesome;
-
+.card-img-top{
+    align-self: center;
+    width: 7rem;
+    height: 7rem;
 }
 
-/* Page Count Formatter Styles */
-.pageCount{
-    margin-left: 9rem;
-    margin-top: 1.5rem;
-    font-style: italic;
-    font-weight: bold;
+.agGridEx{
+    padding-left: 10%;
+    padding-right: 5%;
+    margin-bottom: 5%;
 }
 
-#pageSize{
-    font-style: italic;
-    width: max-content;
-    border-color: #00093d;
-    border-radius: 5%;
-    overflow: hidden;
-    margin-left: 8px;
+.examp{
+    margin-right: 3%;
+    box-shadow: 0px 5px 15px rgba(175, 171, 171, 0.659);
+}
+
+.card-body{
+    align-self: center;
+    text-align: center;
+}
+
+.cardText{
+    height: 9rem;
+}
+
+.fa-eyes{
+    color: rgb(0, 31, 57);
+}
+
+.btn{
+    border: none;
+}
+
+.btn:hover{
+    color: rgb(255, 0, 0);
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }

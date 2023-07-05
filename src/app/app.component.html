@@ -1,34 +1,111 @@
-<!-- Default Search bar -->
-<form role="search" >
-    <input class="form-control searchBar" type="search" id="searchFeature" placeholder="&#xf002;   Search" (input)="onFilterTextBoxChanged()">
-</form>
-
-<!-- Create AG Grid Table -->
-<ag-grid-angular
-    style="width: 80%;"
-    class="ag-theme-alpine"
-    [rowData]="rowData"
-    [rowHeight]="rowHeight"
-    [columnDefs]="columnDefs"
-    [defaultColDef]="defaultColDef"
-    [pagination]="true"
-    [paginationPageSize]="paginationPageSize"
-    [paginationNumberFormatter]="paginationNumberFormatter"
-    [suppressMenuHide]="true"
-    domLayout='autoHeight'
-    (gridReady)="onGridReady($event)"
-    [cacheQuickFilter]="true"
-    [excludeHiddenColumnsFromQuickFilter] = "true"
-    >
-</ag-grid-angular>
-  
-<div class="pageCount">
-    Page Size:
-    <select (change)="onPageSizeChanged()" id="pageSize">
-        <option value="5" selected="true">Default</option>
-        <option value="2">2</option>
-        <option value="8">8</option>
-        <option value="15">15</option>
-    </select>
+<a href="https://www.ag-grid.com/" target="_blank"><h3>AG-Grid <img src="https://blog.ag-grid.com/content/images/2021/11/200pxArtboard-5.png" class="agGridLogo"></h3></a>
+<div class="intro"><p>
+    Ag-Grid is a feature-rich JavaScript library that provides developers with a highly customizable and performant 
+    data grid for web applications. It is designed to handle large datasets and offers a wide range of functionalities, 
+    making it a popular choice for building complex grid interfaces.</p><p>
+    With Ag-Grid, developers can easily display, sort, filter, and edit tabular data. It supports various features such 
+    as column grouping, pinning, resizing, and reordering, enabling users to efficiently navigate and manipulate data. 
+    The library also offers advanced features like row selection, virtual scrolling, and server-side pagination, which 
+    optimize performance when dealing with large amounts of data. Ag-Grid is framework-agnostic (can be used with different 
+    JavaScript frameworks and libraries) and can be implemented using the following technologies.</p> 
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="https://www.ag-grid.com/javascript-data-grid/getting-started/" target="_blank">
+            <div class="card">
+                <img class="card-img-top" src="https://www.ag-grid.com/static/javascript-63a7be100cadd83322fc020c36820172.svg" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text">JavaScript</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="https://www.ag-grid.com/react-data-grid/getting-started/" target="_blank">
+            <div class="card">
+                <img class="card-img-top" src="https://www.ag-grid.com/static/react-f098a313abafa8642511eabdfa6dfd8e.svg" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text">React</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="https://www.ag-grid.com/angular-data-grid/getting-started/" target="_blank">
+            <div class="card">
+                <img class="card-img-top" src="https://www.ag-grid.com/static/angular-e185415c50bc1885eed6c6cc9d2b009e.svg" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text">Angular</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a href="https://www.ag-grid.com/vue-data-grid/getting-started/" target="_blank">
+            <div class="card">
+                <img class="card-img-top" src="https://www.ag-grid.com/static/vue-f9e57c613665512559b017097fd772de.svg" alt="Card image cap">
+                <div class="card-body">
+                <p class="card-text">Vue</p>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
 </div>
+
+<hr/>
+
+<div class="agGridEx">
+    <h4>AG-Grid Angular Examples</h4>
+    <div class="row">
+        <div class="col-md-2 examp">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Static Grid</h5>
+              <p class="card-text cardText">Implementation of AG-Grid using hardcoded or static data</p>
+              <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 examp">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Dynamic Grid</h5>
+              <p class="card-text cardText">AG-Grid implementation using dynamic data retrieved from a JSON file.</p>
+              <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 examp">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">With Features</h5>
+                <p class="card-text cardText">AG-Grid provides various features to make the grid more flexible. Search/ paging/ sort/ filter are some.</p>
+                <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 examp">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Customized C/R</h5>
+                <p class="card-text cardText">Customized specific columns and rows for AG-Grid</p>
+                <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 examp">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">With Animation</h5>
+                <p class="card-text cardText">Implementation of AG-Grid using animated content</p>
+                <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+</div>
+
+<footer class= "footer">
+    <span> All Rights Reserved 2023 @Dulara_Dinuli</span>
+</footer>
 

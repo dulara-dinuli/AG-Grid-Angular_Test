@@ -1,0 +1,72 @@
+.ag-theme-alpine {
+    /* position: relative; */
+    border: 1.5px solid  rgba(0, 0, 0, 0.521);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-left: 0.5px solid  rgba(0, 0, 0, 0.13);
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.521);
+    margin:0;
+    margin-top: 6rem;
+    margin-left: 9rem;
+    --ag-odd-row-background-color: #D9D9D9;
+    --ag-header-background-color: rgb(109, 188, 169);
+    --ag-row-hover-color: rgba(8, 128, 78, 0.349);
+    --ag-range-selection-border-color:transparent;
+    --ag-row-border:none;
+    --ag-header-column-separator-display:border;
+    --ag-header-column-separator-color: rgba(0, 0, 0, 0.521); 
+
+}
+
+.ag-ltr .ag-cell{
+    border-right-width: 1px;
+    border-right-color:  rgba(0, 0, 0, 0.521);
+}
+
+.ag-header-cell{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.521);
+}
+
+.ag-theme-alpine .ag-icon-menu:hover{
+    color: rgb(0, 118, 92);
+}
+
+.ag-theme-alpine .ag-icon-none:hover{
+    color: rgb(0, 130, 89);
+}
+
+.ag-header-cell-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Default Search bar styles */
+.searchBar,.form-control{
+    position: absolute;
+    top: 5%;
+    right: 11%;
+    width: 20%;
+    background-color: rgb(224, 224, 224);
+    color: #202020;
+    font-family:Arial, FontAwesome;
+
+}
+
+/* Page Count Formatter Styles */
+.pageCount{
+    margin-left: 9rem;
+    margin-top: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#pageSize{
+    font-style: italic;
+    width: max-content;
+    border-color: #00093d;
+    border-radius: 5%;
+    overflow: hidden;
+    margin-left: 8px;
+}
