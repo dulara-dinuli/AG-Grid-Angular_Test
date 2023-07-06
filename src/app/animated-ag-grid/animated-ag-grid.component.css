@@ -1,0 +1,66 @@
+.ag-theme-alpine {
+    /* position: relative; */
+    border: 1.5px solid  rgba(255, 162, 0, 0.684);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-left: 0.5px solid  rgba(255, 153, 0, 0.641);
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.521);
+    margin:0;
+    margin-top: 1%;
+    margin-left: 9rem;
+    --ag-odd-row-background-color: #D9D9D9;
+    --ag-header-background-color: rgba(237, 154, 0, 0.725);
+    --ag-row-hover-color: rgba(255, 220, 150, 0.581);
+    --ag-range-selection-border-color:transparent;
+    --ag-row-border:none;
+    --ag-header-column-separator-display:border;
+    --ag-header-column-separator-color: rgba(0, 0, 0, 0.521); 
+
+}
+
+.ag-ltr .ag-cell{
+    border-right-width: 1px;
+    border-right-color:  rgba(0, 0, 0, 0.521);
+}
+
+.ag-header-cell{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.521);
+}
+
+.ag-header-cell-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+h5{
+    margin-top: 3%;
+    text-align: center;
+}
+
+.countBar{
+    display: inline-block; 
+    height: 10px; 
+    margin-top: 3%; 
+    margin-right: 10px; 
+    margin-left: 10%;
+    width: 100px; 
+    border: 1px solid rgb(93, 93, 93);
+
+}
+
+.transition-width {
+    background-color: rgba(237, 154, 0, 0.725); 
+    height: 100%; 
+    width: 0%;
+    -webkit-transition: width 3s;
+    -moz-transition: width 3s;
+    -o-transition: width 3s;
+    -ms-transition: width 3s;
+    transition: width 3s;
+}
+
+
+
+

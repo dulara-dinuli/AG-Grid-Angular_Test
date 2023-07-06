@@ -1,4 +1,4 @@
-<a href="https://www.ag-grid.com/" target="_blank"><h3>AG-Grid <img src="https://blog.ag-grid.com/content/images/2021/11/200pxArtboard-5.png" class="agGridLogo"></h3></a>
+<a href="https://www.ag-grid.com/" target="_blank"><h3>AG-Grid<img src="https://blog.ag-grid.com/content/images/2021/11/200pxArtboard-5.png" class="agGridLogo"></h3></a>
 <div class="intro"><p>
     Ag-Grid is a feature-rich JavaScript library that provides developers with a highly customizable and performant 
     data grid for web applications. It is designed to handle large datasets and offers a wide range of functionalities, 
@@ -53,16 +53,16 @@
 </div>
 
 <hr/>
+<h4>AG-Grid Angular Examples</h4>
 
 <div class="agGridEx">
-    <h4>AG-Grid Angular Examples</h4>
     <div class="row">
         <div class="col-md-2 examp">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Static Grid</h5>
               <p class="card-text cardText">Implementation of AG-Grid using hardcoded or static data</p>
-              <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+              <a routerLink="/static-ag-grid" (click)="handPointVisible('staticGrid')" class="btn"><i class="fa-solid fa-eye"></i></a>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
             <div class="card-body">
               <h5 class="card-title">Dynamic Grid</h5>
               <p class="card-text cardText">AG-Grid implementation using dynamic data retrieved from a JSON file.</p>
-              <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+              <a routerLink="/dynamic-ag-grid" (click)="handPointVisible('dynamicGrid')" class="btn"><i class="fa-solid fa-eye"></i></a>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
               <div class="card-body">
                 <h5 class="card-title">With Features</h5>
                 <p class="card-text cardText">AG-Grid provides various features to make the grid more flexible. Search/ paging/ sort/ filter are some.</p>
-                <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+                <a routerLink="/features-ag-grid" (click)="handPointVisible('featureGrid')" class="btn"><i class="fa-solid fa-eye"></i></a>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@
               <div class="card-body">
                 <h5 class="card-title">Customized C/R</h5>
                 <p class="card-text cardText">Customized specific columns and rows for AG-Grid</p>
-                <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+                <a routerLink="/customized-cr-ag-grid" (click)="handPointVisible('customGrid')" class="btn"><i class="fa-solid fa-eye"></i></a>
               </div>
             </div>
           </div>
@@ -98,14 +98,39 @@
               <div class="card-body">
                 <h5 class="card-title">With Animation</h5>
                 <p class="card-text cardText">Implementation of AG-Grid using animated content</p>
-                <a href="#" class="btn"><i class="fa-solid fa-eye"></i></a>
+                <a routerLink="/animated-ag-grid" (click)="handPointVisible('animatedGrid')" class="btn"><i class="fa-solid fa-eye"></i></a>
               </div>
             </div>
           </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-2 handPoint">
+          <i class="fa-sharp fa-solid fa-hand-point-down fa-bounce" id="staticGrid"></i>
+        </div>
+        <div class="col-md-2 handPoint">
+          <i class="fa-sharp fa-solid fa-hand-point-down fa-bounce" id="dynamicGrid"></i>
+        </div>
+        <div class="col-md-2 handPoint">
+          <i class="fa-sharp fa-solid fa-hand-point-down fa-bounce" id="featureGrid"></i>
+        </div>
+        <div class="col-md-2 handPoint">
+          <i class="fa-sharp fa-solid fa-hand-point-down fa-bounce" id="customGrid"></i>
+        </div>
+        <div class="col-md-2 handPoint">
+          <i class="fa-sharp fa-solid fa-hand-point-down fa-bounce" id="animatedGrid"></i>
+        </div>
+      </div>
+</div>
+<hr/>
+
+<div class="example">
+  <router-outlet></router-outlet>
 </div>
 
 <footer class= "footer">
     <span> All Rights Reserved 2023 @Dulara_Dinuli</span>
 </footer>
+
+
 

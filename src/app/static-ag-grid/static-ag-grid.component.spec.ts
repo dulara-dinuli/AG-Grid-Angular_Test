@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StatiicAGGridComponent } from './statiic-ag-grid.component';
+import { StatiicAGGridComponent } from './static-ag-grid.component';
 
 describe('StatiicAGGridComponent', () => {
   let component: StatiicAGGridComponent;

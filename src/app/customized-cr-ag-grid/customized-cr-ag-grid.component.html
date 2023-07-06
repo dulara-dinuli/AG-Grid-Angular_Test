@@ -1,1 +1,19 @@
-<p>customized-cr-ag-grid works!</p>
+<h5>AG-Grid with Customized Columns & Rows</h5>
+
+<button class="btn addRow" (click)="addNewRow()">Add New Row</button>
+
+<!-- Create AG Grid Table -->
+    <ag-grid-angular
+      style="width: 80%"
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [rowHeight]="rowHeight"
+      [columnDefs]="columnDefs"
+      [pagination]="true"
+      [paginationPageSize]="paginationPageSize"
+      domLayout='autoHeight'
+      (gridReady)="onGridReady($event)"
+      [getRowStyle]="getRowStyle"
+    >
+    </ag-grid-angular>
+  

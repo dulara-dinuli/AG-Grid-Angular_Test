@@ -1,1 +1,23 @@
-<p>animated-ag-grid works!</p>
+<h5>Animated AG-Grid</h5>
+
+<div class = "countBar">
+    <div id="animationCountdown" class="transition-width"></div>
+</div>
+  
+<span id="animationAction"></span>
+
+<!-- Create AG Grid Table -->
+<ag-grid-angular
+    style="width: 80%"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [suppressAggFuncInHeader]="true"
+    (gridReady)="onGridReady($event)"
+    [animateRows]="true"
+    domLayout='autoHeight'
+    >
+</ag-grid-angular>
+
+

@@ -1,0 +1,43 @@
+.ag-theme-alpine {
+    /* position: relative; */
+    box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.521);
+    margin:0;
+    margin-top: 5%;
+    margin-left: 9rem;
+    --ag-odd-row-background-color: #ffffff;
+    --ag-header-background-color: rgba(62, 84, 181, 0.648);
+    --ag-row-hover-color: rgba(154, 171, 211, 0.255);
+}
+
+h5{
+    margin-top: 3%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.photo{
+    width:80px;
+    height: 80px;
+}
+
+.btn{
+    border: 1px solid rgb(0, 12, 64);
+    background-color: rgb(212, 235, 255);
+    position: relative;
+    float: right;
+    margin-right:10%;
+}
+    
+.btn:hover{
+    background-color:rgba(62, 84, 181, 0.859);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+::ng-deep .ag-header-group-cell-label {
+    justify-content: center !important;
+  }
+  
+::ng-deep .ag-header-cell-label {
+    justify-content: center !important;
+  }

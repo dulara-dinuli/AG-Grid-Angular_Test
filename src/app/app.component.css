@@ -8,7 +8,6 @@
     background-color: rgb(255, 255, 255);
     text-align:center;
     padding: 5px;
-    padding-left: 80px;
     color: rgb(62, 62, 62);
 }
 
@@ -24,7 +23,6 @@
 
 h3{
     text-align: center;
-    margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 3%;
 }
@@ -56,12 +54,26 @@ h4{
 .agGridEx{
     padding-left: 10%;
     padding-right: 5%;
-    margin-bottom: 5%;
 }
 
 .examp{
     margin-right: 3%;
     box-shadow: 0px 5px 15px rgba(175, 171, 171, 0.659);
+}
+
+.handPoint{
+    text-align: center;
+    margin-top: 3rem;
+    margin-right: 3%;
+}
+
+.fa-hand-point-down{
+    font-size: 30px;
+    color: green;
+}
+
+#staticGrid,#dynamicGrid,#featureGrid,#customGrid,#animatedGrid{
+    display: none;
 }
 
 .card-body{
@@ -88,4 +100,8 @@ h4{
 a{
     text-decoration: none;
     color: black;
+}
+
+.example{
+    margin-bottom: 5%;
 }
