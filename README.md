@@ -33,3 +33,13 @@ Home Page
 <img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-Home0.png?raw=true">
 Home Page (cont.)
 <img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-Home1.png?raw=true">
+AG-Grid - Static Grid
+<img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-StaticGrid.png?raw=true">
+AG-Grid - Dynamic Grid
+<img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-DynamicGrid.png?raw=true">
+AG-Grid - With Features
+<img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-FeaturesGrid.png?raw=true">
+AG-Grid - Customized Column/ Row Grid
+<img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-CustomizedCRGrid.png?raw=true">
+AG-Grid - Animated Grid
+<img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-AnimatedGrid.gif?raw=true">
