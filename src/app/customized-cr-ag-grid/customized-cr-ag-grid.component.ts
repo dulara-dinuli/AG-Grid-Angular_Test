@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { AgGridAngular } from 'ag-grid-angular';
 import { ColDef, ColGroupDef, GridApi,GridReadyEvent, RowClassParams, RowStyle, ValueGetterParams} from 'ag-grid-community';
 import { CharacterPhotoComponent } from '../character-photo/character-photo.component';
 

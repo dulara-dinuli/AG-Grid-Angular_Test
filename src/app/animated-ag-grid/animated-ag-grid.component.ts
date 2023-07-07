@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AgGridAngular } from 'ag-grid-angular';
 import { ColDef, ColumnApi, GridApi, GridReadyEvent } from 'ag-grid-community';
 
 

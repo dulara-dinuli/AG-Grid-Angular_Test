@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular'; // Import cell rendering components
-import { ICellRendererParams } from 'ag-grid-community';  // Import cell rendering parameters
 import { Router } from '@angular/router';
 
 @Component({
