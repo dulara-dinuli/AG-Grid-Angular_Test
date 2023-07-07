@@ -1,8 +1,7 @@
 # AG-Grid Angular 🛠️
+Demo Web Application:- <a href="https://dulara-dinuli.github.io/AG-Grid-Angular_Test/" target="_blank"> Watch Me 👀 </a>
 
 <b>This web application was developed to test and preview prototype grid examples using the functionality provided by the AG-Grid library.</b>
-
-Demo Web Application:- <a href="https://dulara-dinuli.github.io/AG-Grid-Angular_Test/AG-Grid-Angular_Test/" target="_blank"> Watch Me</a>
 
 Ag-Grid Angular is a powerful data grid library designed for use with Angular, a popular JavaScript framework for building web applications. It provides developers with a flexible and feature-rich grid component that enables efficient data rendering, sorting, filtering and editing capabilities.
 
