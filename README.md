@@ -41,15 +41,15 @@ AG-Grid - Dynamic Grid
 
 AG-Grid - With Features
 <img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-FeaturesGrid.png?raw=true">
-AG-Grid - With Features (cont.)
+AG-Grid - With Features (demo)
 <img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-FeaturesGrid.gif?raw=true">
 
 AG-Grid - Customized Column/ Row Grid
 <img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-CustomizedCRGrid.png?raw=true">
-AG-Grid - Customized Column/ Row Grid (cont.)
+AG-Grid - Customized Column/ Row Grid (demo)
 <img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-CustomizedCRGrid.gif?raw=true">
 
 AG-Grid - Animated Grid
 <img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-AnimatedGrid.png?raw=true">
-AG-Grid - Animated Grid (cont.)
+AG-Grid - Animated Grid (demo)
 <img src= "https://github.com/dulara-dinuli/AG-Grid-Angular_Test/blob/main/ScreenShots/AG-Grid-AnimatedGrid.gif?raw=true">
