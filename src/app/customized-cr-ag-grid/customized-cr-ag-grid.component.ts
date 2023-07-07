@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AgGridAngular } from 'ag-grid-angular';
-import { GridApi,GridReadyEvent, RowClassParams, RowStyle, ValueGetterParams} from 'ag-grid-community';
+import { ColDef, ColGroupDef, GridApi,GridReadyEvent, RowClassParams, RowStyle, ValueGetterParams} from 'ag-grid-community';
 import { CharacterPhotoComponent } from '../character-photo/character-photo.component';
 
 @Component({
@@ -11,14 +11,21 @@ import { CharacterPhotoComponent } from '../character-photo/character-photo.comp
 })
 export class CustomizedCRAGGridComponent {
 
+  public isColumnVisible = false;
+
   // Defining columns using AG Grid
-  public columnDefs = [
-    {headerName: 'Index', field: 'studentId', cellStyle: {textAlign: 'center'}, flex:2},
+  public columnDefs: (ColDef | ColGroupDef)[] = [
+    {headerName: 'Index', field: 'studentId', cellStyle: {textAlign: 'center'}, flex:1},
     {headerName: 'Full Name', valueGetter: concatName, flex:2},
+    {headerName: 'More Info', field: 'moreInfo', flex:3, suppressSizeToFit: true, 
+      children: [
+        {headerName: 'Address', field: 'address', resizable: true,  hide: !this.isColumnVisible},
+        {headerName: 'Contact', field: 'contactNo', hide: !this.isColumnVisible},
+      ]},
     {headerName: 'Email', field: 'email', flex:2},
-    {headerName: 'Title', field: 'title', flex:2, hide:true},
+    {headerName: 'Title', field: 'title', flex:2, hide: !this.isColumnVisible},
     {headerName: 'Gender', field: 'gender', cellRenderer: CharacterPhotoComponent, 
-    cellRendererParams: { data: this }, cellStyle: {textAlign: 'center'}, flex:3
+    cellRendererParams: { data: this }, cellStyle: {textAlign: 'center'}, flex:2
   }  // Rendering More-Info drop down list
   ];
 
@@ -51,9 +58,32 @@ export class CustomizedCRAGGridComponent {
   }
 
   addNewRow() {
-    const newRowData = { studentId: 0, firstName: 'New', lastName: 'Student', email: 'newstudent@gmail.com', title: 'Mr' };
+    const newRowData = { studentId: 0, firstName: 'New', lastName: 'Student', email: 'newstudent@gmail.com', title: 'Mr/ Miss', address: 'New Address', contactNo: '044 #######' };
     this.rowData.push(newRowData);
     this.gridApi.setRowData(this.rowData);
+  }
+
+  toggleColumnVisibility() {
+    this.isColumnVisible = !this.isColumnVisible;
+    const columnDefs = this.gridApi.getColumnDefs();
+    if(columnDefs){
+    const updatedColumnDefs = columnDefs.map((colDef: any) => {
+      if (colDef.field === 'moreInfo') {
+        if (colDef.children[0].field === 'address' && colDef.children[1].field === 'contactNo') {
+          colDef.children[0].hide = !this.isColumnVisible;
+          colDef.children[1].hide = !this.isColumnVisible;
+          if(this.isColumnVisible == true){
+            document.getElementById('icon')!.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+          }
+          else if(this.isColumnVisible == false){
+            document.getElementById('icon')!.innerHTML = '<i class="fa-solid fa-eye"></i>';
+          } 
+        }
+      }
+      return colDef;
+    });
+    this.gridApi.setColumnDefs(updatedColumnDefs);
+    }
   }
 
 }

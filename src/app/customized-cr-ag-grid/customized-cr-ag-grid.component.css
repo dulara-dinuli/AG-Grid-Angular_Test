@@ -7,6 +7,9 @@
     --ag-odd-row-background-color: #ffffff;
     --ag-header-background-color: rgba(62, 84, 181, 0.648);
     --ag-row-hover-color: rgba(154, 171, 211, 0.255);
+    /* --ag-header-column-separator-display:border;
+    --ag-header-column-separator-color: rgba(191, 203, 255, 0.23);  */
+    --ag-header-column-resize-handle-color: rgba(215, 222, 255, 0.648);
 }
 
 h5{
@@ -25,13 +28,17 @@ h5{
     background-color: rgb(212, 235, 255);
     position: relative;
     float: right;
-    margin-right:10%;
+    margin-right:10.5%;
 }
     
 .btn:hover{
     background-color:rgba(62, 84, 181, 0.859);
     color: rgb(255, 255, 255);
     border: none;
+}
+
+.addRow{
+    margin-right:2%;    
 }
 
 ::ng-deep .ag-header-group-cell-label {
