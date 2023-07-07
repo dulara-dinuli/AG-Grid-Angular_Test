@@ -39,6 +39,7 @@ export class CustomizedCRAGGridComponent {
 
   onGridReady(params: GridReadyEvent) {
     this.gridApi = params.api; //Getting parameters through Grid API
+    this.gridApi.setGroupHeaderHeight(0);
   }
 
   ngOnInit(){
@@ -65,25 +66,26 @@ export class CustomizedCRAGGridComponent {
 
   toggleColumnVisibility() {
     this.isColumnVisible = !this.isColumnVisible;
-    const columnDefs = this.gridApi.getColumnDefs();
-    if(columnDefs){
-    const updatedColumnDefs = columnDefs.map((colDef: any) => {
-      if (colDef.field === 'moreInfo') {
-        if (colDef.children[0].field === 'address' && colDef.children[1].field === 'contactNo') {
-          colDef.children[0].hide = !this.isColumnVisible;
-          colDef.children[1].hide = !this.isColumnVisible;
-          if(this.isColumnVisible == true){
-            document.getElementById('icon')!.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
-          }
-          else if(this.isColumnVisible == false){
-            document.getElementById('icon')!.innerHTML = '<i class="fa-solid fa-eye"></i>';
-          } 
+  
+    this.columnDefs.forEach((colDef: any) => {
+      if (colDef.headerName === 'More Info') {
+
+        colDef.children.forEach((child: any) => {
+          child.hide = !this.isColumnVisible;
+        });
+
+        if(this.isColumnVisible == true){
+          this.gridApi.setGroupHeaderHeight(45);
+          document.getElementById('icon')!.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
         }
+        else if(this.isColumnVisible == false){
+          this.gridApi.setGroupHeaderHeight(0);
+          document.getElementById('icon')!.innerHTML = '<i class="fa-solid fa-eye"></i>';
+        } 
       }
-      return colDef;
     });
-    this.gridApi.setColumnDefs(updatedColumnDefs);
-    }
+  
+    this.gridApi.setColumnDefs(this.columnDefs);
   }
 
 }
