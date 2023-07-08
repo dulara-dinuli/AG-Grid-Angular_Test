@@ -9,9 +9,10 @@ Ag-Grid Angular is known for its high performance and wide functionality. It sup
 
 ---
 
+
 <h3>Technologies:</h3>
 <ul>
-  <liAnglar</li>
+   <li>Angular (15.1.0)</li>
 </ul>
 
 <h3>Libraries:</h3>
