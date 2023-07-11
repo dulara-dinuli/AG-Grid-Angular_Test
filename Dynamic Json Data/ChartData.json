@@ -9,8 +9,8 @@
   { "model": "Nissan Altima", "price": 23000 },
   { "model": "Hyundai Sonata", "price": 20000 },
   { "model": "Kia Optima", "price": 21000},
-  { "product": "Tea", "avg": 20 },
-  { "product": "Coconut", "avg": 60 },
-  { "product": "Ruber", "avg": 60 },
-  { "product": "Cinnamon", "avg": 60 }
+  { "product": "Tea", "avg": 20},
+  { "product": "Coconut", "avg": 60},
+  { "product": "Ruber", "avg": 60},
+  { "product": "Cinnamon", "avg": 60},
 ]
