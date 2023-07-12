@@ -1,0 +1,20 @@
+[
+  { "model": "Toyota Camry", "price": 25000 },
+  { "model": "Honda Civic", "price": 22000 },
+  { "model": "Ford Mustang", "price": 35000 },
+  { "model": "Chevrolet Corvette", "price": 60000 },
+  { "model": "BMW 3 Series", "price": 40000 },
+  { "model": "Mercedes-Benz C-Class", "price": 45000 },
+  { "model": "Audi A4", "price": 38000 },
+  { "model": "Nissan Altima", "price": 23000 },
+  { "model": "Hyundai Sonata", "price": 20000 },
+  { "model": "Kia Optima", "price": 21000},
+  { "product": "Tea", "avg": 20},
+  { "product": "Coconut", "avg": 60},
+  { "product": "Rubber", "avg": 60},
+  { "product": "Cinnamon", "avg": 60},
+  { "x": 92, "y": 95, "r": 12},
+  { "x": 75, "y": 85, "r": 14},
+  { "x": 80, "y": 75, "r": 16},
+  { "x": 82, "y": 96, "r": 15}
+]
