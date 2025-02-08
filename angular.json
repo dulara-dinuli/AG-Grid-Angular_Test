@@ -27,7 +27,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/AG-Grid-Angular_Test/"
           },
           "configurations": {
             "production": {
