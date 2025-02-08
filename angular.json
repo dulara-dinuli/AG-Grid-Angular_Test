@@ -27,16 +27,15 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "baseHref": "/AG-Grid-Angular_Test/"
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "3mb"
+                  "maximumWarning": "1.5mb",
+                  "maximumError": "1.6mb"
                 },
                 {
                   "type": "anyComponentStyle",
